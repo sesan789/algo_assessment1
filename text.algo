@@ -1,0 +1,26 @@
+FUNCTION analyzeSentence(sentence)
+    length = 0
+    wordCount = 0
+    vowelCount = 0
+
+    FOR each character IN sentence
+        length = length + 1
+
+        IF character is a space
+            wordCount = wordCount + 1
+        ELSE IF character is a vowel
+            vowelCount = vowelCount + 1
+
+        IF character is a period
+            BREAK
+
+    wordCount = wordCount + 1
+
+    PRINT "Length of the sentence:", length
+    PRINT "Number of words:", wordCount
+    PRINT "Number of vowels:", vowelCount
+END FUNCTION
+
+// Example usage
+sentence = "This is a sample sentence."
+analyzeSentence(sentence)
